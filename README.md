@@ -7,5 +7,5 @@ This repository contains the Ansible tasks to configure my Rasberry Pi devices a
 ## How to run it
 
 ```
-ansible-playbook -vv -i hosts.ini main.yam
+ansible-playbook -vv -i hosts.ini main.yaml
 ```
