@@ -1,0 +1,6 @@
+# Enable mouse support
+set -g mouse on
+
+# Automatically enter copy-mode when scrolling
+# (correct Setup for Mouse Scroll (iTerm2)
+bind -n WheelUpPane if-shell -F -t= "#{pane_in_mode}" "" "copy-mode -e"

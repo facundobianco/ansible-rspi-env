@@ -1,0 +1,11 @@
+---
+ - name: Ensure .hushlogin exists for root
+   ansible.builtin.file:
+     path: /root/.hushlogin
+     state: touch
+
+ - name: Ensure .hushlogin exists for default user
+   ansible.builtin.file:
+     path: "/home/{{ ansible_user }}/.hushlogin"
+     state: touch
+     owner: "{{ ansible_user }}"

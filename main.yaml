@@ -1,0 +1,12 @@
+---
+- name: Raspbian essential tools
+  hosts:
+    - raspbian
+    - dietpi
+  roles:
+    - setup
+
+- name: Configure DietPi
+  hosts: dietpi
+  roles:
+    - dietpi

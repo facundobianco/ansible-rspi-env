@@ -1,0 +1,6 @@
+---
+- name: Install required packages
+  include_tasks: pkgs.yaml
+
+- name: Copy configurations
+  include_tasks: config.yaml

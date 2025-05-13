@@ -1,0 +1,17 @@
+" Disable Visual mode on mouse select
+set mouse-=a
+
+" Syntax highlighting
+syntax on
+
+" Show matching brackets.
+set showmatch
+
+" Tab inserts 4 spaces
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+" The following to have Vim jump to the last position when
+" reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

@@ -1,0 +1,22 @@
+---
+- name: Copy vimrc for root
+  ansible.builtin.copy:
+    src: vimrc.j2
+    dest: /root/.vimrc
+
+- name: Copy vimrc for default user
+  ansible.builtin.copy:
+    src: vimrc.j2
+    dest: "/home/{{ ansible_user }}/.vimrc"
+    owner: "{{ ansible_user }}"
+
+- name: Copy tmuxrc for root
+  ansible.builtin.copy:
+    src: tmux.j2
+    dest: /root/.tmux.conf
+
+- name: Copy tmuxrc for default user
+  ansible.builtin.copy:
+    src: tmux.j2
+    dest: "/home/{{ ansible_user }}/.tmux.conf"
+    owner: "{{ ansible_user }}"

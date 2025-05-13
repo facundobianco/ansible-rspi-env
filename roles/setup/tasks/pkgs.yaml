@@ -1,0 +1,17 @@
+---
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install essential packages
+  ansible.builtin.apt:
+    name:
+      - bc
+      - git
+      - htop
+      - net-tools
+      - netcat-openbsd
+      - tmux
+      - vim-nox
+    state: present
